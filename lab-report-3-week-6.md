@@ -44,13 +44,15 @@ the `.` indicates that we're copying the entire working directory (the directory
 ### Logging into my ieng6 account after copying directory and compiling and running tests from my repository
 ![login and compiling and running repo in ieng6 account](runningonieng6.png)
 ### Combining `scp`, `;`, and `ssh` to copy the whole directory and run the tests in one line.
-I was unable to do this, and the TA's were unable to provide a solution, I both used direct commands and makefile but it failed because it could not find symbols such as Path.of or readString, I have posted on Piazza and will update the below images if I find a solution:<br>
-<!-- ![using scp;ssh to copy whole dir and runs tests in one line]() -->
-Failing with normal method<br>
+`scp -r *.java *.md lib ieng6:markdown-parse; ssh ieng6 "cd markdown-parse; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac MarkdownParse.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; /software/CSE/oracle-java-17/jdk-17.0.1/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest`
+![using scp;ssh to copy whole dir and runs tests in one line](softwareonrightversion.png)
+I was initially unable to do this, I both used direct commands and makefile but it failed because it could not find symbols such as Path.of or readString due to the remote server using an older version of Java when running javac and java over ssh. We seem to be specifying what specfic version of Java we want to run this on.<br>
+Outtakes of suffering:<br>
+Failing with normal method while using java and javac<br>
 `scp -r *.java *.md lib ieng6:markdown-parse; ssh ieng6 "cd markdown-parse; javac MarkdownParse.java; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
 ![Normal method](normalfirstfail.png)
 ![Normal method](normallastfail.png)
-Failing with make test and showing that running the same commands while logged into ieng6 works<br>
+Failing with make test using java and javac and showing that running the same commands while logged into ieng6 works<br>
 `scp -r *.java *.md lib makefile ieng6:markdown-parse; ssh ieng6 "cd markdown-parse; make test"`
 ![makefile method](makefilefail.png)
 ![makefile method](makefilesuccessieng6.png)
