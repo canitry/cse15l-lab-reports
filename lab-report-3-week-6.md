@@ -5,7 +5,7 @@ This is the config file in my directory
 ![My ssh config file in directory](r3config.png)
 I used the following command `notepad config` to open the file in notepad
 ![open with notepad](notepadconfig.png)
-This is the config file open in notepad, you can see the necessary ilnes inside<br>
+This is the config file open in notepad, you can see the necessary lines inside<br>
 `Host ieng6`<br>
     \<tab\> `HostName ieng6.ucsd.edu`<br>
     \<tab\> `User cs15lsp22zzz (use your username)`<br>
@@ -19,21 +19,25 @@ Use the general form `scp` \<file/directory\> `ieng6:~/` where `ieng6:~/` is ser
 ![scp copying file to account using alias](r3scpwithconfig.png)
 ## Setup Github Access from ieng6
 ### Location of public key in Github and in user account
-![location of public key in Github](publickeygithub.png)
 The location of my public key in Github
-![location of public key in my user account](pubprivlocuser.png)
-![location of public key in my user account](r3config.png)
+![location of public key in Github](publickeygithub.png)
 The location of my public key `id_rsa.pub` in my user account
+![location of public key in my user account](pubprivlocuser.png)
+The location of my public key `id_rsa.pub` in my user account through the terminal
+![location of public key in my user account](r3config.png)
 ### Location of private key in user account
-![location of private key in user account](pubprivlocuser.png)
-![location of private key in user account](r3config.png)
 The location of my private key `id_rsa` in my user account
+![location of private key in user account](pubprivlocuser.png)
+The location of my private key `id_rsa` in my user account through the terminal
+![location of private key in user account](r3config.png)
 ### Running `git` commands to commit and push change to Github while logged in ieng6
-Note: when you're git clone you want to use the SSH instead of the HTML, you can see it in this [post](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key), but it'll still ask you for a token or password and username if you use the HTML, you can, however update something you cloned initially with HTML to SSH. (you do this with `git remote set-url origin git@github.com:`\<Username\>/\<Project\>`.git`, by the way, `git@github.com:`\<Username\>/\<Project\>`.git` is just the SSH URL of your project)
+Note: when you're git clone you want to use the SSH instead of the HTML, you can see it in this [post](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key), but it'll still ask you for a token or password and username if you use the HTML, you can, however update something you cloned initially with HTML to SSH. (you do this with `git remote set-url origin git@github.com:`\<Username\>/\<Project\>`.git` (by the way, `git@github.com:`\<Username\>/)\<Project\>`.git` is just the SSH URL of your project)
 ![running git commands to commit/push changes in ieng6 to Github](commitandpush.png)<br>
 [link to resulting commit](https://github.com/canitry/markdown-parser/commit/08bda667b47647ea90cca53dd0f9467636653371)
 ## Copying whole directories with scp -r
 ### Copying whole markdown-parse directory to my ieng6 account
+the `.` indicates that we're copying the entire working directory (the directory we're on) and the stuff inside that directory -r I means "recursive" and allows it to copy the working directory and also the directories inside that directory (tells scp to work recursively)<br>
+(The screenshot's been split into two because I couldn't fit it in one screen.)
 ![copying markdown-parser directory to ieng6 account](beginningofscpr.png)<br>
 ...<br>
 ![copying markdown-parser directory to ieng6 account](endofscpr.png)
