@@ -44,14 +44,14 @@ the `.` indicates that we're copying the entire working directory (the directory
 ### Logging into my ieng6 account after copying directory and compiling and running tests from my repository
 ![login and compiling and running repo in ieng6 account](runningonieng6.png)
 ### Combining `scp`, `;`, and `ssh` to copy the whole directory and run the tests in one line.
-I was unable to do this, and the TA's were unable to provide a solution, I both used direct commands and makefile but it failed because it could not find symbols such as Path.of or readString, I have posted on Piazza and will update the below images if I find a solution:
+I was unable to do this, and the TA's were unable to provide a solution, I both used direct commands and makefile but it failed because it could not find symbols such as Path.of or readString, I have posted on Piazza and will update the below images if I find a solution:<br>
 <!-- ![using scp;ssh to copy whole dir and runs tests in one line]() -->
-Failing with normal method
+Failing with normal method<br>
 `scp -r *.java *.md lib ieng6:markdown-parse; ssh ieng6 "cd markdown-parse; javac MarkdownParse.java; javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParseTest.java; java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest"`
 ![Normal method](normalfirstfail.png)
 ![Normal method](normallastfail.png)
-Failing with make test and showing that running the same commands while logged into ieng6 works
+Failing with make test and showing that running the same commands while logged into ieng6 works<br>
 `scp -r *.java *.md lib makefile ieng6:markdown-parse; ssh ieng6 "cd markdown-parse; make test"`
 ![makefile method](makefilefail.png)
-`ssh ieng6` --> `cd markdown-parse` --> `make test`
 ![makefile method](makefilesuccessieng6.png)
+`ssh ieng6` --> `cd markdown-parse` --> `make test`
