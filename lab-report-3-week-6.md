@@ -30,8 +30,8 @@ The location of my private key `id_rsa` in my user account
 ![location of private key in user account](pubprivlocuser.png)
 The location of my private key `id_rsa` in my user account through the terminal
 ![location of private key in user account](r3config.png)
-### Running `git` commands to commit and push change to Github while logged in ieng6
-Note: when you're git clone you want to use the SSH instead of the HTML, you can see it in this [post](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key), but it'll still ask you for a token or password and username if you use the HTML, you can, however update something you cloned initially with HTML to SSH. (you do this with `git remote set-url origin git@github.com:`\<Username\>/\<Project\>`.git` (by the way, `git@github.com:`\<Username\>/)\<Project\>`.git` is just the SSH URL of your project)
+### Running `git` commands to commit and push changes to Github while logged in ieng6
+Note: when you're git cloning you want to use the SSH instead of the HTML, you can see it in this [post](https://stackoverflow.com/questions/14762034/push-to-github-without-a-password-using-ssh-key), but it'll still ask you for a token or password and username if you use the HTML, you can, however update something you cloned initially with HTML to SSH. (you do this with `git remote set-url origin git@github.com:`\<Username\>/\<Project\>`.git` (by the way, `git@github.com:`\<Username\>/)\<Project\>`.git` is just the SSH URL of your project)
 ![running git commands to commit/push changes in ieng6 to Github](commitandpush.png)<br>
 [link to resulting commit](https://github.com/canitry/markdown-parser/commit/08bda667b47647ea90cca53dd0f9467636653371)
 ## Copying whole directories with scp -r
