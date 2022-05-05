@@ -30,4 +30,11 @@ The location of my private key `id_rsa` in my user account
 ### Logging into my ieng6 account after copying directory and compiling and running tests from my repository
 ![login and compiling and running repo in ieng6 account](runningonieng6.png)
 ### Combining `scp`, `;`, and `ssh` to copy the whole directory and run the tests in one line.
-![using scp;ssh to copy whole dir and runs tests in one line]()
+I was unable to do this, and the TA's were unable to provide an answer, I both used direct commands and makefile but it failed because it could not find symbol such as Path.of or readString, I have posted on Piazza and will update the below images if it is successful:
+#![using scp;ssh to copy whole dir and runs tests in one line]()
+Failing with normal method
+![Normal method](normalfirstfail.png)
+![Normal method](normallastfail.png)
+Failing with make test and showing that running the same commands while logged into ieng6 works
+![makefile method](makefilefail.png)
+![makefile method](makefilesuccessieng6.png)
