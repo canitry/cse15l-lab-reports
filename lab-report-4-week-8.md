@@ -1,14 +1,17 @@
 [Link to my markdown-parse repository]()
+
 [Link to reviewed-markdown-parse repository]()
 
-Each snippet's expected output was made based on the VSCode preview and how the actual markdown file was displayed.
+Each snippet's expected output was decided based on the VSCode preview and how the actual markdown file was displayed in Github.
 
-Snippet 1:
+![result](lab4/withfixMain.png)
+
+# Snippet 1:
 ```
 
 ```
 
-Test for snippet 1:
+## Test for snippet 1:
 ```
 @Test
 public void testSnippet1() throws IOException
@@ -17,26 +20,26 @@ public void testSnippet1() throws IOException
 }
 ```
 
-My implementation's output:
+## My implementation's output:
 
-Failure. It led to an index out of bounds error. exp...
-![result]()
+Failure. It did not recognize the difference between
+![result](lab4/withfixtest1.png)
 
-Possible fix:
+### Possible fix:
 
-Reviewed implementation's output:
+## Reviewed implementation's output:
 
 Failure. exp...
 ![result]()
 
-Possible fix:
+## Possible fix:
 
-Snippet 2:
+# Snippet 2:
 ```
 
 ```
 
-Test for snippet 2:
+## Test for snippet 2:
 ```
 @Test
 public void testSnippet2() throws IOException
@@ -45,26 +48,26 @@ public void testSnippet2() throws IOException
 }
 ```
 
-My implementation's output:
+## My implementation's output:
 
 Failure. It led to an index out of bounds error. exp...
-![result]()
+![result](lab4/withfixtest2.png)
 
-Possible fix:
+### Possible fix:
 
-Reviewed implementation's output:
+## Reviewed implementation's output:
 
 Failure. exp...
 ![result]()
 
-Possible fix:
+### Possible fix:
 
-Snippet 3:
+# Snippet 3:
 ```
 
 ```
 
-Test for snippet 3:
+## Test for snippet 3:
 ```
 @Test
 public void testSnippet3() throws IOException
@@ -73,16 +76,16 @@ public void testSnippet3() throws IOException
 }
 ```
 
-My implementation's output:
+## My implementation's output:
 
 Failure. It led to an index out of bounds error. exp...
-![result]()
+![result](lab4/withfixtest3.png)
 
-Possible fix:
+### Possible fix:
 
-Reviewed implementation's output:
+## Reviewed implementation's output:
 
 Failure. exp...
 ![result]()
 
-Possible fix:
+### Possible fix:
