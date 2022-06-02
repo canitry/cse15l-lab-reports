@@ -1,7 +1,7 @@
 # Lab Report 5
 ## How I found the test with different results:
 I used the `vimdiff` on the `results.txt` files of each respective implementation.
-![vimdiff]()
+![vimdiff](lab5/image19.png)
 
 ## Test 201.md:
 I used `$ bash script.sh > results.txt` for each implementation then `$ vimdiff markdown-parser/results.txt cse15lsp22-markdown-parser/results.txt` and found that the lines with the results of `test-files/201.md` differed for the `results.txt` of the given implementation and my implementation.
