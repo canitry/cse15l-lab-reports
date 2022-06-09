@@ -12,7 +12,7 @@ For 201.md, my markdown-parser was right because the markdown file on github did
 The expected output should be `[]`, there are no valid links in the file.
 
 Fix: For the given markdown-parser, instead of looking for a `]` then a `(` and finally a `)` then adding the stuff inside the `(` and `)` as a link, it should look for a `]` then a `](` then a `)` to ensure that there are no spaces or characters between the closing bracket and the parentheses of the link.
-change this part:[link to part to fix](https://github.com/nidhidhamnani/markdown-parser/blob/8dd87e6914ae40a4321aac8e2483e349de40b03c/MarkdownParse.java#L64-L65) and replace all openParen and nextCloseBracket to the variable indicating the location of `](`
+### change this part:[link to part to fix](https://github.com/nidhidhamnani/markdown-parser/blob/8dd87e6914ae40a4321aac8e2483e349de40b03c/MarkdownParse.java#L64-L65) and replace all openParen and nextCloseBracket to the variable indicating the location of `](`
 ```
             int nextCloseBracket = markdown.indexOf("]", nextOpenBracket);
             int openParen = markdown.indexOf("(", nextCloseBracket);
@@ -36,7 +36,7 @@ bar>` as a valid link)
 The expected output should be `[]`, there are no valid links in the file.
 
 Fix: For my markdown-parser, instead of just adding what's inside the `(` and `)` of the potential link, we should first trim the string inside the `(` and `)` then check if that trimmed content is a valid link (ie. it has no spaces, no new lines).
-change this part: [link to part to fix](https://github.com/canitry/markdown-parser/blob/a60d52d7c11a1be42bc61ebf528f30cab51e5711/MarkdownParse.java#L90), element.trim() then check if it contains new lines or spaces, only add to list if it doesn't.
+### change this part: [link to part to fix](https://github.com/canitry/markdown-parser/blob/a60d52d7c11a1be42bc61ebf528f30cab51e5711/MarkdownParse.java#L90), element.trim() then check if it contains new lines or spaces, only add to list if it doesn't.
 ```
                     if (element != null){
                         toReturn.add(element);
