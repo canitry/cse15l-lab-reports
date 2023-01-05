@@ -1,5 +1,4 @@
-this is my index file weeeeeeeee
-hi
+Welcome to my lab reports for CSE 15L 
 
 <!-- [Lab Report 1](lab-report-1-week-2.html) -->
 
